@@ -1,3 +1,17 @@
 ---
+--update - find a better package for this
 
 --
+from twc import Tweetifier
+
+#int the obj
+T = Tweetifier("paraazz", 100)
+
+#crawl or fetch the tweets max: 3200
+T.crawl()
+crawled_tweets = T.tweets
+
+#classify the tweets topic wise 
+#(Multinomial Naive Bayes Classifier accuracy: 78%)
+T.classify()
+tweets_topic = T.topic_bucket
